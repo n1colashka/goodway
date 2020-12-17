@@ -97,7 +97,7 @@ h6 {
     position: relative;
 
     &:hover::after {
-        animation: rotating-scale 2s ease forwards;
+        animation: rotating-scale 1.5s ease forwards;
     }
     
     &::after {
