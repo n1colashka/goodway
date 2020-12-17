@@ -1,0 +1,20 @@
+$grey: #676767;
+
+@mixin font($name) {
+    @if $name == 'ms' {
+        font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+    }
+    @if $name == 'ms-medium' {
+        font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+    @if $name == 'ms-semibold' {
+        font-family: 'Montserrat-SemiBold', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    @if $name == 'ms-bold' {
+        font-family: 'Montserrat-Bold', Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+}  

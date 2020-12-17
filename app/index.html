@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Студия Докучаева Алексея (www.alexey-dockuchaev.com.ua)" />
+    <title>GOODWAY</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+-	<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N5DBCJL');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <header class="header">
+    </header>
+    
+
+    <footer class="footer">
+    </footer>
+    
+    <script src="js/libs.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            if(event.detail.contactFormId=="41"){
+                ym(55512022, 'reachGoal', 'SEND_1');
+            }
+        }, false );
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script>
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(55512022, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+
+    <noscript>
+        <div><img src="//mc.yandex.ru/watch/55512022" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!--ROISTAT BEGINS-->
+    <script>
+        (function(w, d, s, h, id) {
+            w.roistatProjectId = id; w.roistatHost = h;
+            var p = d.location.protocol == "https:" ? "https://" : "http://";
+            var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+            var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+        })(window, document, 'script', 'cloud.roistat.com', 'c3e30b87d642cc74377a0aa7f9a13e32');
+    </script>
+    <!--ROISTAT ENDS-->
+    <script>
+        window.onRoistatAllModulesLoaded = function() {
+            window.roistat.leadHunter.onAfterSubmit = function(leadData) {
+                ym(55512022,'reachGoal','loveclidov');
+                gtag('event', 'call', {'event_category': 'phone','event_label': 'roistat','value': 'value'});
+            }
+        };
+    </script>
+
+
+    
+</body>
+</html>
