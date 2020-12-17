@@ -1,0 +1,32 @@
+@keyframes rotating-scale {
+    0% {
+        transform: scale(1) rotate(0);
+    }
+    33% {
+        transform: scale(1.1) rotate(15deg);
+    }
+    100% {
+        transform: scale(1.2) rotate(-15deg);
+    }
+}
+@keyframes rotating-scale-reverse {
+    0% {
+        transform: scale(1.2) rotate(-15deg);
+
+    }
+    33% {
+        transform: scale(1.1) rotate(15deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 10;
+    }
+}

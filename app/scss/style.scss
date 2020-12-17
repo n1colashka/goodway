@@ -1,6 +1,7 @@
 // Base
 @import "vars";
 @import "global";
+@import "animations";
 
 // Header
 @import "header";
@@ -9,6 +10,7 @@
 
 
 // Pages
+@import "hero";
 
 // Footer
 @import "footer";

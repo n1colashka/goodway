@@ -13,6 +13,10 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000000;
     overflow-x: hidden;
 }
 
@@ -42,15 +46,100 @@ h6 {
     margin: 0;
 }
 .container {
-    max-width: 1550px;
+    max-width: 1720px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 50px;
     box-sizing: border-box;
+
+    @media (max-width: 600px) {
+        padding: 0 5px;
+    }
+
 }
 
 .btn {
+    display: inline-block;
+    background: $gradient;
+    box-shadow: $shadow;
+    border: none;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 30px;
+    max-width: 495px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    margin: 20px 60px 20px 0;
+    transition: .3s ease;
+
+    &:active {
+        background: $gradient-active;
+    }
+
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
+
+    @media (max-width: 600px) {
+        max-width: 275px;
+        padding: 18px 30px;
+        font-size: 12px;
+        margin-right: 20px;
+    }
 }
+
+.btn--key {
+    position: relative;
+
+    &:hover::after {
+        animation: rotating-scale 2s ease forwards;
+    }
+    
+    &::after {
+        position: absolute;
+        content: "";
+        background: url('../images/keys.png') no-repeat center / cover;
+        width: 126px;
+        height: 108px;
+        right: -53px;
+        top: -12px;
+        transition: .3s ease;
+        transform: scale(1) rotate(0);
+        animation: rotating-scale-reverse 1s ease forwards;
+
+        @media (max-width: 600px) {
+            width: 70px;
+            height: 61px;
+            right: -40px;
+        }
+    }
+
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    padding-right: 15px;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 30%;
+        width: 100%;
+        background-color: $main;
+        bottom: 5px;
+        left: 0;
+        z-index: -1;
+    }
+}
+
 
 // Input number fix
 

@@ -1,8 +1,57 @@
 @media (max-width: 1600px) {
 }
 
+@media (max-width: 1366px) {
+    .header {
+        &__logo {
+            margin-right: 35px;
+        }
+    }
+    .navigation li {
+        margin-left: 20px;
+    }
+}
+
 @media (max-width: 1280px) {
 
+}
+
+@media (max-width: 1250px) {
+    .first-screen {
+        min-height: 1200px;
+        background: url(../images/hero-bg.jpg) no-repeat center left 42% /cover;
+    }
+
+    .hero {
+        min-height: calc(1200px - 135px);
+        &__foot {
+            margin-left: 240px;
+        }
+        &__right {
+            margin-bottom: 125px;
+        }
+    }
+
+    .header {
+        &__navigation {
+            display: none;
+        }
+        &__left .header__geo {
+            display: none;
+        }
+        &__call-btn {
+            border-bottom: 1px dashed $main;
+            padding-bottom: 0;
+            &::after {
+                content: none;
+            }
+        }
+    }
+    .menu {
+        &__btn {
+            display: block;
+        }
+    }
 }
 
 @media (max-width: 1024px) {

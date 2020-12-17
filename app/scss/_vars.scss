@@ -1,20 +1,8 @@
-$grey: #676767;
-
-@mixin font($name) {
-    @if $name == 'ms' {
-        font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-    }
-    @if $name == 'ms-medium' {
-        font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
-        font-weight: 500;
-    }
-    @if $name == 'ms-semibold' {
-        font-family: 'Montserrat-SemiBold', Arial, Helvetica, sans-serif;
-        font-weight: 600;
-    }
-    @if $name == 'ms-bold' {
-        font-family: 'Montserrat-Bold', Arial, Helvetica, sans-serif;
-        font-weight: 700;
-    }
-}  
+$gradient: linear-gradient(360deg, #FCCB05 0%, #FFE57D 100%);
+$gradient-active: linear-gradient(360deg, #FFE57D 0%, #FFE57D 100%);
+$red-gradient: linear-gradient(94.73deg, #FC0505 0%, #FF5151 86.09%);
+$blue-gradient: linear-gradient(94.73deg, #051EFC 0%, #51A1FF 86.09%);
+$main: #FCCB05;
+$grey: #BFBFBF;
+$shadow: 0px 15px 40px rgba(252, 203, 5, 0.3), inset 0px -10px 4px #E3BA15, inset 0px -15px 4px #FFD632;
+$shadow-hover: 0px 15px 40px rgba(252, 203, 5, 0.6), inset 0px -10px 4px #E3BA15, inset 0px -15px 4px #FFD632;

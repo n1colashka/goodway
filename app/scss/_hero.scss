@@ -1,0 +1,114 @@
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 135px);
+
+    &__main {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    &__box {
+        max-width: 650px;
+        margin-bottom: 60px;
+        margin-left: 240px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        span {
+            color: $main;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-bottom: 25px;
+        span {
+            width: 600px;
+        }
+    }
+
+    &__benefits {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__benefits-item {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        justify-content: flex-start;
+        text-align: center;
+        min-width: 300px;
+        min-height: 60px;
+        padding: 6px;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 40px;
+
+        span {
+            display: block;
+            position: relative;
+            z-index: 3;
+        }
+
+        svg path {
+            stroke-dasharray: 10;
+            stroke-dashoffset: 1000;
+        }
+        &:hover {
+            svg path {
+                animation: dash 24s linear infinite forwards;
+            }
+        }
+    }
+
+    &__benefits-bg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        left: -50%;
+    }
+
+    &__foot {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-weight: 500;
+        line-height: 17px;
+    }
+
+    &__foot-item {
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        max-width: 345px;
+        color: #ffffff;
+
+        img {
+            margin-right: 20px;
+        }
+
+        &:first-child {
+            margin-left: 0;
+            max-width: 250px;
+
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+
+}
