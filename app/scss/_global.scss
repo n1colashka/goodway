@@ -60,6 +60,7 @@ h6 {
 
 .btn {
     display: inline-block;
+    text-align: center;
     background: $gradient;
     box-shadow: $shadow;
     border: none;
@@ -74,7 +75,6 @@ h6 {
     cursor: pointer;
     border-radius: 10px;
     outline: none;
-    margin: 20px 60px 20px 0;
     transition: .3s ease;
 
     &:active {
@@ -89,12 +89,18 @@ h6 {
         max-width: 275px;
         padding: 18px 30px;
         font-size: 12px;
-        margin-right: 20px;
+        background: linear-gradient(360deg, #FCCB05 0%, #FFE57D 100%);
+        box-shadow: 0px 8.40868px 22.4231px rgba(252, 203, 5, 0.3), inset 0px -5.60579px 2.24231px #E3BA15, inset 0px -8.40868px 2.24231px #FFD632;
     }
 }
 
 .btn--key {
     position: relative;
+    margin: 10px 60px 10px 0;
+
+    @media (max-width: 600px) {
+        margin-right: 20px;
+    }
 
     &:hover::after {
         animation: rotating-scale 1.5s ease forwards;
@@ -106,7 +112,7 @@ h6 {
         background: url('../images/keys.png') no-repeat center / cover;
         width: 126px;
         height: 108px;
-        right: -53px;
+        right: -28px;
         top: -12px;
         transition: .3s ease;
         transform: scale(1) rotate(0);
@@ -150,4 +156,11 @@ input[type='number'] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+    body {
+        overflow: hidden;
+    }
 }
