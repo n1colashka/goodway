@@ -115,7 +115,7 @@
     transition: .3s ease;
 
     &__head {
-        display: flex;
+        display: none;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 70px;
@@ -189,6 +189,7 @@
 
     &.open {
         transform: translateX(0);
+        
         .header__call {
             display: block;
         }
