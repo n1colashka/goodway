@@ -139,16 +139,32 @@ h6 {
     line-height: 120%;
     padding-right: 15px;
     z-index: 2;
-    &::before {
-        position: absolute;
-        content: "";
-        height: 30%;
-        width: 100%;
-        background-color: $main;
-        bottom: 5px;
-        left: 0;
-        z-index: -1;
+
+    span {
+        position: relative;
+        display: inline-block;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 30%;
+            width: 103%;
+            background-color: $main;
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+        }
     }
+    
+    // &::before {
+    //     position: absolute;
+    //     content: "";
+    //     height: 30%;
+    //     width: 100%;
+    //     background-color: $main;
+    //     bottom: 5px;
+    //     left: 0;
+    //     z-index: -1;
+    // }
 
     @media (max-width: 1100px) {
         font-size: 36px;

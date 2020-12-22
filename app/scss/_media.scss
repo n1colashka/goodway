@@ -1,3 +1,21 @@
+@media (max-width: 1720px) {
+    .benefits {
+        &__item--1 {
+            left: -30px;
+            top: 160px;
+        }
+        &__item--2 {
+            left: 270px;
+        }
+        &__item--3 {
+            right: 110px;
+        }
+        &__item--4 {
+            left: 115px;
+        }
+    }
+}
+
 @media (max-width: 1670px) {
     .cars-slider__arrow--prev {
         margin-right: 10px;
@@ -9,6 +27,62 @@
 @media (max-width: 1570px) {
     .cars-slider__item {
         max-width: calc(33.33% - 18px);
+    }
+    .benefits {
+        padding-bottom: 100px;
+        &__bg {
+            display: block;
+        }
+        &__car {
+            position: absolute;
+            right: -218px;
+            top: 45px;
+            bottom: 0;
+            img {
+                width: 1735px;
+                max-width: 1735px;
+            }
+        }
+        &__title {
+            margin-bottom: 100px;
+        }
+        &__inner {
+            min-height: 930px;
+            padding-top: 200px;
+        }
+        &__item--1 {
+            top: 230px;
+        }
+
+        &__item--4 {
+            top: 530px;
+        }
+
+        &__item--3 {
+            top: 87px;
+        }
+        
+        &__item--5 {
+            top: 387px;
+        }
+        
+        &__item--6 {
+            top: 687px;
+        }
+        
+        &__item--1,
+        &__item--2,
+        &__item--4 {
+            right: auto;
+            left: 0;
+        }
+        &__item--3,
+        &__item--5,
+        &__item--6 {
+            left: auto;
+            right: 0;
+            bottom: auto;
+        }
     }
 }
 
@@ -254,6 +328,128 @@
             background-position: center bottom;
         }
     }
+
+    .benefits {
+        &__item--1,
+        &__item--2,
+        &__item--4 {
+            left: -35px;
+        }
+        &__item--3,
+        &__item--5,
+        &__item--6 {
+            right: -35px;
+        }
+    }
+}
+
+@media (max-width: 845px) {
+    .benefits {
+        padding-top: 100px;
+        .swiper-pagination,
+        .benefits-button-prev,
+        .benefits-button-next {
+            display: block;
+        }
+        .benefits-button-next,
+        .benefits-button-prev {
+            left: 0;
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 50px;
+            border: 2px solid $main;
+            border-radius: 50%;
+            z-index: 20;
+            flex-shrink: 0;
+            cursor: pointer;
+            border: 3px solid rgba(252, 203, 5, 1);
+            transition: .3s ease;
+
+            &::before, &::after {
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 2px;
+                left: 50%;
+                top: 49%;
+                background-color: $main;
+                transform-origin: left;
+                transform: translate(-50%, -50%) rotate(45deg);
+                transition: .3s ease;
+            }
+    
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+                top: 51%;
+            }
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: 13px;
+        }
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__item-title {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 120%;
+        }
+        &__item-text {
+            font-size: 12px;
+            line-height: 140%;
+        }
+        .benefits-button-next {
+            right: 0;
+            left: auto;
+
+            &::before, &::after {
+                transform-origin: right;
+                top: 51%;
+            }
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+                top: 49%;
+            }
+        }
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            &.swiper-pagination-bullet-active {
+                background-color: $main;
+            }
+        }
+        &__bg {
+            display: none;
+        }
+        &__slider {
+            height: 550px;
+        }
+        &__car {
+            display: none;
+        }
+        &__inner {
+            padding-top: 0;
+            min-height: auto;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: static;
+            box-sizing: border-box;
+            margin-bottom: -20px;
+        }
+        
+        &__slider-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item--left {
+            align-items: flex-end;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -362,6 +558,7 @@
     }
 }
 @media (max-width: 600px) {
+    
     .partners {
         padding: 40px 0;
         &__inner {
@@ -423,8 +620,34 @@
             line-height: 16px;
         }
     }
+
 }
 
+@media (max-width: 430px) {
+    .benefits {
+        &__item {
+            background-size: cover;
+            width: calc(470px - 36%);
+            height: calc(270px - 14%);
+            margin-bottom: 30px;
+            padding: 30px;
+        }
+        &__slider {
+            height: auto;
+            padding-bottom: 40px;
+        }
+        &__item--left {
+            .benefits__item-inner {
+                top: 0;
+            }
+        }
+        &__item-inner {
+            max-width: 200px;
+            position: relative;
+            top: 20px;
+        }
+    }
+}
 @media (max-width: 400px) {
     .cars-slider {
         &__info {

@@ -93,6 +93,27 @@ document.addEventListener('DOMContentLoaded', function () {
         return carsSlider.update();
       }, 100);
     });
+  }
+
+  function initBenefitsSlider() {
+    var benefitsSlider = document.querySelector('.benefits__slider');
+    var benefitsSliderWrapper = document.querySelector('.benefits__list');
+    var benefitsSliderItems = document.querySelectorAll('.benefits__slider-item');
+    benefitsSlider.classList.add('swiper-container');
+    benefitsSliderWrapper.classList.add('swiper-wrapper');
+    benefitsSliderItems.forEach(function (item) {
+      item.classList.add('swiper-slide');
+    });
+    var benefitsSliderSwiper = new Swiper('.benefits__slider', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      navigation: {
+        nextEl: '.benefits-button-next',
+        prevEl: '.benefits-button-prev'
+      }
+    });
   } // Функции работающие только на мобильных устройствах
 
 
@@ -100,6 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
     initMenu();
   }
 
-  AOS.init();
-  initCarsSlider();
+  if (window.innerWidth <= 845) {
+    initBenefitsSlider();
+  }
+
+  initCarsSlider(); // AOS.init();
 });

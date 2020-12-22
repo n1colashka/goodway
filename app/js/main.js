@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
             }
         })
-
+        
         if (window.innerWidth <= 1220) {
             showMoreCars();
             carsSlider.destroy();
@@ -104,13 +104,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function initBenefitsSlider() {
+        const benefitsSlider = document.querySelector('.benefits__slider');
+        const benefitsSliderWrapper = document.querySelector('.benefits__list');
+        const benefitsSliderItems = document.querySelectorAll('.benefits__slider-item');
+
+        benefitsSlider.classList.add('swiper-container');
+        benefitsSliderWrapper.classList.add('swiper-wrapper');
+        benefitsSliderItems.forEach(item => {
+            item.classList.add('swiper-slide');
+        });
+
+        var benefitsSliderSwiper = new Swiper('.benefits__slider', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.benefits-button-next',
+                prevEl: '.benefits-button-prev',
+            },
+        })
+    }
+
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 1250) {
         initMenu();
     }
-    
 
-    AOS.init();
+    if (window.innerWidth <= 845) {
+        initBenefitsSlider();
+    }
+
     initCarsSlider();
+    // AOS.init();
 
 });

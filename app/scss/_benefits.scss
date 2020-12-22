@@ -1,0 +1,117 @@
+.benefits {
+    padding-top: 160px;
+    overflow: hidden;
+    position: relative;
+
+    &__title {
+        margin-bottom: 115px;
+    }
+
+    &__inner {
+        position: relative;
+        min-height: 770px;
+    }
+
+    &__car {
+
+        img {
+            margin: 0 auto;
+            width: 1240px;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        display: flex;
+        width: 470px;
+        height: 270px;
+        padding: 50px;
+        padding-top: 80px;
+    }
+
+    &__item--left {
+        justify-content: flex-end;
+
+        .benefits__item-inner {
+            padding-left: 0;
+            padding-right: 15px;
+        }
+    }
+
+    &__item--1 {
+        background: url('../images/benefits-item-1.svg') no-repeat center;
+        left: 20px;
+        top: 170px;
+    }
+    &__item--2 {
+        background: url('../images/benefits-item-2.svg') no-repeat center;
+        left: 390px;
+        top: -70px;
+    }
+    &__item--3 {
+        background: url('../images/benefits-item-3.svg') no-repeat center;
+        right: 285px;
+        top: -80px;
+    }
+    &__item--4 {
+        background: url('../images/benefits-item-4.svg') no-repeat center;
+        left: 230px;
+        bottom: 90px;
+    }
+    &__item--5 {
+        background: url('../images/benefits-item-5.svg') no-repeat center;
+        right: 415px;
+        bottom: 160px;
+    }
+    &__item--6 {
+        background: url('../images/benefits-item-6.svg') no-repeat center;
+        right: -30px;
+        top: 195px;
+    }
+
+    &__item-inner {
+        max-width: 250px;
+        padding-left: 15px;
+    }
+    
+    &__item-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+
+    &__item-text {
+        font-size: 14px;
+        line-height: 140%;
+        color: #BFBFBF;
+    }
+    &__bg {
+        display: none;
+    }
+
+    &__bg-item {
+        position: absolute;
+    }
+
+    &__bg-item--left {
+        width: 151px;
+        height: 124px;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__bg-item--right {
+        width: 161px;
+        height: 262px;
+        top: 170px;
+        right: 0;
+    }
+
+    .swiper-pagination,
+    .benefits-button-prev,
+    .benefits-button-next {
+        display: none;
+    }
+}
