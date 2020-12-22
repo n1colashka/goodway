@@ -46,7 +46,7 @@ h6 {
     margin: 0;
 }
 .container {
-    max-width: 1720px;
+    max-width: 1820px;
     width: 100%;
     margin: 0 auto;
     padding: 0 50px;
@@ -138,6 +138,7 @@ h6 {
     font-size: 48px;
     line-height: 120%;
     padding-right: 15px;
+    z-index: 2;
     &::before {
         position: absolute;
         content: "";
