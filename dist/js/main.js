@@ -134,8 +134,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function removeBenefitsItemsAnimations() {
     var benefitsItems = document.querySelectorAll('.benefits__item');
+    console.log(benefitsItems);
     benefitsItems.forEach(function (item) {
-      delete item.dataset.aos;
+      console.log(item);
+      item.removeAttribute('data-aos');
     });
   } // Функции работающие только на мобильных устройствах
 
@@ -144,11 +146,11 @@ document.addEventListener('DOMContentLoaded', function () {
     initMenu();
   }
 
-  initCarsSlider();
-  initCarMove();
-
   if (window.innerWidth <= 845) {
     initBenefitsSlider();
     removeBenefitsItemsAnimations();
   }
+
+  initCarsSlider();
+  initCarMove();
 });

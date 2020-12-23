@@ -148,9 +148,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function removeBenefitsItemsAnimations() {
         const benefitsItems = document.querySelectorAll('.benefits__item');
+        console.log(benefitsItems);
 
         benefitsItems.forEach(item => {
-            delete item.dataset.aos;
+            console.log(item);
+            item.removeAttribute('data-aos');
         })
     }
 
@@ -159,12 +161,13 @@ document.addEventListener('DOMContentLoaded', function () {
         initMenu();
     }
 
+    if (window.innerWidth <= 845) {
+        initBenefitsSlider();
+        removeBenefitsItemsAnimations();
+    }
 
     initCarsSlider();
     initCarMove();
 
-    if (window.innerWidth <= 845) {
-        initBenefitsSlider();
-        removeBenefitsItemsAnimations()
-    }
+    
 });
