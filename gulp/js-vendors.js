@@ -3,9 +3,9 @@ const concat = require('gulp-concat');
 
 const vendorsScripts = [
     // Insert libs src here:
+    'node_modules/aos/dist/aos.js',
     'node_modules/swiper/swiper-bundle.min.js',
     // 'node_modules/fslightbox/index.js',
-    'node_modules/aos/dist/aos.js',
 ];
 
 module.exports = function vendors(cb) {
