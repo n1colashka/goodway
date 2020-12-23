@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function initCarMove() {
     var car = document.querySelector("#car");
-    var carWrapper = document.querySelector(".benefits__car");
+    var carWrapper = document.querySelector(".benefits__inner");
     var moveRange = 0;
     var startX = -100,
         blurValue = 5,
@@ -193,6 +193,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   initCarsSlider();
-  initCarMove();
-  initAos();
+  initCarMove(); // initAos();
 });
