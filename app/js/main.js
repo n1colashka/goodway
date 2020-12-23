@@ -142,7 +142,10 @@ document.addEventListener('DOMContentLoaded', function () {
             car.style.filter = `blur(${blurValue}px)`;
             moveRange = evt.movementX;
         })
-    
+        carWrapper.addEventListener('mouseleave', function() {
+            car.style.transform = '';
+            car.style.filter = '';
+        })
     
     }
 
