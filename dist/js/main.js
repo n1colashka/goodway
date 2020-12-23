@@ -130,6 +130,13 @@ document.addEventListener('DOMContentLoaded', function () {
       car.style.filter = "blur(".concat(blurValue, "px)");
       moveRange = evt.movementX;
     });
+  }
+
+  function removeBenefitsItemsAnimations() {
+    var benefitsItems = document.querySelectorAll('.benefits__item');
+    benefitsItems.forEach(function (item) {
+      delete item.dataset.aos;
+    });
   } // Функции работающие только на мобильных устройствах
 
 
@@ -137,10 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
     initMenu();
   }
 
-  if (window.innerWidth <= 845) {
-    initBenefitsSlider();
-  }
-
   initCarsSlider();
   initCarMove();
+
+  if (window.innerWidth <= 845) {
+    initBenefitsSlider();
+    removeBenefitsItemsAnimations();
+  }
 });
