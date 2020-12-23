@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function initCarMove() {
     var car = document.querySelector("#car");
     var carWrapper = document.querySelector(".benefits__inner");
-    var moveRange = 0;
     var startX = -100,
         blurValue = 5,
         w = document.documentElement.offsetWidth,
@@ -138,57 +137,109 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function removeBenefitsItemsAnimations() {
     var benefitsItems = document.querySelectorAll('.benefits__item');
-    console.log(benefitsItems);
     benefitsItems.forEach(function (item) {
-      console.log(item);
       item.removeAttribute('data-aos');
     });
   }
 
-  AOS.init({
-    // Global settings:
-    disable: false,
-    // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    startEvent: 'DOMContentLoaded',
-    // name of the event dispatched on the document, that AOS should initialize on
-    initClassName: 'aos-init',
-    // class applied after initialization
-    animatedClassName: 'aos-animate',
-    // class applied on animation
-    useClassNames: false,
-    // if true, will add content of `data-aos` as classes on scroll
-    disableMutationObserver: false,
-    // disables automatic mutations' detections (advanced)
-    debounceDelay: 50,
-    // the delay on debounce used while resizing window (advanced)
-    throttleDelay: 99,
-    // the delay on throttle used while scrolling the page (advanced)
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 120,
-    // offset (in px) from the original trigger point
-    delay: 0,
-    // values from 0 to 3000, with step 50ms
-    duration: 500,
-    // values from 0 to 3000, with step 50ms
-    easing: 'ease',
-    // default easing for AOS animations
-    once: false,
-    // whether animation should happen only once - while scrolling down
-    mirror: false,
-    // whether elements should animate out while scrolling past them
-    anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
+  function initAos() {
+    AOS.init({
+      // Global settings:
+      disable: false,
+      // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded',
+      // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init',
+      // class applied after initialization
+      animatedClassName: 'aos-animate',
+      // class applied on animation
+      useClassNames: false,
+      // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false,
+      // disables automatic mutations' detections (advanced)
+      debounceDelay: 50,
+      // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99,
+      // the delay on throttle used while scrolling the page (advanced)
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120,
+      // offset (in px) from the original trigger point
+      delay: 0,
+      // values from 0 to 3000, with step 50ms
+      duration: 500,
+      // values from 0 to 3000, with step 50ms
+      easing: 'ease',
+      // default easing for AOS animations
+      once: false,
+      // whether animation should happen only once - while scrolling down
+      mirror: false,
+      // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
 
-  }); // Функции работающие только на мобильных устройствах
+    });
+  }
+
+  function initStepsSliders() {
+    var galleryThumbs = new Swiper('.steps-nav-slider', {
+      slidesPerView: 5,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      touchRatio: 0,
+      breakpoints: {
+        320: {
+          touchRatio: 1,
+          freeMode: true
+        },
+        601: {
+          touchRatio: 0,
+          slidesPerView: 5
+        }
+      }
+    });
+    var galleryTop = new Swiper('.steps-main-slider', {
+      navigation: {
+        nextEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-next'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      initialSlide: 4,
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+  }
+
+  function changeStepsLineSize() {
+    var lines = document.querySelectorAll('.steps-nav-slider__line svg line');
+    var lineSvg = document.querySelectorAll('.steps-nav-slider__line svg');
+    lines.forEach(function (line) {
+      line.setAttribute('x2', '120');
+    });
+    lineSvg.forEach(function (line) {
+      line.setAttribute('width', '120');
+      line.setAttribute('viewBox', '0 0 120 3');
+    });
+  } // Функции работающие только на мобильных устройствах
+
 
   if (window.innerWidth <= 1250) {
     initMenu();
   }
 
   if (window.innerWidth <= 845) {
-    initBenefitsSlider();
     removeBenefitsItemsAnimations();
+    initBenefitsSlider();
   }
 
+  if (window.innerWidth <= 768) {
+    changeStepsLineSize();
+  }
+
+  initCarMove();
+  initAos();
+  initStepsSliders();
   initCarsSlider();
-  initCarMove(); // initAos();
 });

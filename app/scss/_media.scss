@@ -14,9 +14,16 @@
             left: 115px;
         }
     }
+
+    .steps__bg-item--right {
+        right: -120px;
+    }
 }
 
 @media (max-width: 1670px) {
+    .steps__bg-item--left {
+        left: 5vw;
+    }
     .cars-slider__arrow--prev {
         margin-right: 10px;
     }
@@ -25,6 +32,9 @@
     }
 }
 @media (max-width: 1570px) {
+    .steps__bg {
+        display: none;
+    }
     .cars-slider__item {
         max-width: calc(33.33% - 18px);
     }
@@ -206,6 +216,85 @@
     }
 }
 
+@media (max-width: 1350px) {
+    .steps-nav-slider {
+        margin-left: 100px;
+        &__title {
+            max-width: 120px;
+        }
+        &__line {
+            width: 140px;
+            right: -100px;
+        }
+    }
+    .steps-main-slider {
+        padding-bottom: 90px;
+        height: auto;
+
+        &__content {
+            padding-top: 0;
+            margin-left: 15px;
+        }
+
+        &__img {
+            margin-right: 15px;
+            img {
+                height: 100%;
+            }
+        }
+
+        &__item {
+            align-items: flex-end;
+        }
+
+        &__btn {
+            background: linear-gradient(360deg, #FCCB05 0%, #FFE57D 100%);
+            box-shadow: inset 0px -10px 4px #E3BA15, inset 0px -15px 4px #FFD632;
+            margin-top: 20px;
+        }
+
+        .swiper-pagination {
+            bottom: 12px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            top: auto;
+            transform: translateX(-50%);
+            left: calc(50% - 150px);
+            width: 50px;
+            height: 50px;
+            bottom: 0;
+
+            &::before,
+            &::after {
+                height: 11px;
+                width: 2px;
+                top: 62%;
+            }
+
+            &::after {
+                top: 44%;
+            }
+            
+        }
+
+        .swiper-button-prev {
+            &::before {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            &::after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        .swiper-button-next {
+            left: auto;
+            right: calc(50% - 200px);
+        }
+    }
+}
+
 @media (max-width: 1280px) {
 
 }
@@ -341,6 +430,15 @@
             right: -35px;
         }
     }
+    .steps-nav-slider__line {
+        width: 116px;
+        right: -60px;
+    }
+    .steps-nav-slider {
+        margin-left: 0;
+        margin-bottom: 35px;
+    }
+    
 }
 
 @media (max-width: 845px) {
@@ -470,6 +568,70 @@
 }
 
 @media (max-width: 768px) {
+    .steps__title {
+        margin-bottom: 35px;
+    }
+    .steps-nav-slider {
+        &__item {
+            width: 130px;
+        }
+        height: auto;
+        width: 700px;
+        
+        &__line {
+            width: 120px;
+            right: -122px;
+        }
+        &__title {
+            max-width: 95px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &__step {
+            font-size: 12px;
+            line-height: 15px;
+        }
+        &__circle {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .steps-main-slider {
+        padding-bottom: 75px;
+        &__item {
+            flex-direction: column;
+        }
+        &__content {
+            margin-left: 0;
+            max-width: 100%;
+        }
+        &__img {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+            img {
+                height: auto;
+                width: 100%;
+                max-height: 400px;
+            }
+        }
+        .swiper-pagination .swiper-pagination-bullet {
+            margin: 0 12px;
+        }
+        &__btn {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 120%;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 150%;
+        }
+    }
     .header__right > .header__call {
         display: none;
     }
@@ -589,6 +751,19 @@
 
 
 @media (max-width: 480px) {
+    .benefits__title {
+        font-size: 23px;
+    }
+    .steps-main-slider {
+        .swiper-button-next {
+            right: 0;
+            transform: none;
+        }
+        .swiper-button-prev {
+            left: 0;
+            transform: none;
+        }
+    }
     .cars-slider {
         &__item {
         background-position: center bottom -50px;

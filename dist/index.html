@@ -862,15 +862,151 @@
 
     <section class="steps">
         <div class="steps__bg">
-            <img src="images/steps-bg-1.png" alt="bg" class="steps__bg-left">
-            <img src="images/steps-bg-2.png" alt="bg" class="steps__bg-bottom">
-            <img src="images/steps-bg-3.png" alt="bg" class="steps__bg-right">
+            <img src="images/steps-bg-1.png" alt="bg" class="steps__bg-item steps__bg-item--left" data-aos="fade-right">
+            <img src="images/steps-bg-2.png" alt="bg" class="steps__bg-item steps__bg-item--bottom" data-aos="fade-right">
+            <img src="images/steps-bg-3.png" alt="bg" class="steps__bg-item steps__bg-item--right" data-aos="fade-left">
         </div>
         <div class="container">
-            <h1 class="steps__title title"><span>Как начать работу уже сегодня</span><span>всего за 57 минут</span></h1>
+            <h1 class="steps__title title"><span>Как начать работу уже </span> <span>сегодня всего</span> <span> за 57 минут</span></h1>
             <div class="steps__inner">
-                <div class="steps__nav-slider steps-nav-slider"></div>
-                <div class="steps__main-slider steps-main-slider"></div>
+                <div class="steps__nav-slider steps-nav-slider swiper-container">
+                    <div class="steps-nav-slider__wrapper swiper-wrapper">
+                        <div class="steps-nav-slider__item swiper-slide">
+                            <div class="steps-nav-slider__step">этап 5</div>
+                            <div class="steps-nav-slider__circle"></div>
+                            <div class="steps-nav-slider__title">Начать хорошо зарабатывать</div>
+                        </div>
+                        <div class="steps-nav-slider__item swiper-slide">
+                            <div class="steps-nav-slider__step">этап 4</div>
+                            <div class="steps-nav-slider__circle">
+                                <div class="steps-nav-slider__line">
+                                    <svg width="200" height="3" viewBox="0 0 200 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="1.5" y1="1.5" x2="198.5" y2="1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.5 10"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="steps-nav-slider__title">Забрать автомобиль</div>
+                            <div class="steps-nav-slider__subtitle">5-10 минут</div>
+                        </div>
+                        <div class="steps-nav-slider__item swiper-slide">
+                            <div class="steps-nav-slider__step">этап 3</div>
+                            <div class="steps-nav-slider__circle">
+                                <div class="steps-nav-slider__line">
+                                    <svg width="200" height="3" viewBox="0 0 200 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="1.5" y1="1.5" x2="198.5" y2="1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.5 10"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="steps-nav-slider__title">Заключить договор</div>
+                            <div class="steps-nav-slider__subtitle">10-15 минут</div>
+                        </div>
+                        <div class="steps-nav-slider__item swiper-slide">
+                            <div class="steps-nav-slider__step">этап 2</div>
+                            <div class="steps-nav-slider__circle">
+                                <div class="steps-nav-slider__line">
+                                    <svg width="200" height="3" viewBox="0 0 200 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="1.5" y1="1.5" x2="198.5" y2="1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.5 10"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="steps-nav-slider__title">Получить одобрение заявки</div>
+                            <div class="steps-nav-slider__subtitle">28-30 минут</div>
+                        </div>
+                        <div class="steps-nav-slider__item swiper-slide">
+                            <div class="steps-nav-slider__step">этап 1</div>
+                            <div class="steps-nav-slider__circle">
+                                <div class="steps-nav-slider__line">
+                                    <svg width="200" height="3" viewBox="0 0 200 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="1.5" y1="1.5" x2="198.5" y2="1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.5 10"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="steps-nav-slider__title">Оставить заявку</div>
+                            <div class="steps-nav-slider__subtitle">2-3 минуты</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="steps__main-slider steps-main-slider swiper-container">
+                    <div class="steps-main-slider__wrapper swiper-wrapper">
+                        <div class="steps-main-slider__item swiper-slide">
+                            <div class="steps-main-slider__img">
+                                <img src="images/steps-1.jpg" alt="step">
+                            </div>
+                            <div class="steps-main-slider__content">
+                                <div class="steps-main-slider__step">этап 5</div>
+                                <div class="steps-main-slider__title">Оставьте заявку и Lorem ipsum dolor sit </div>
+                                <div class="steps-main-slider__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa </p>
+                                </div>
+                                <a class="steps-main-slider__btn btn" href="#">убедили! оставить заявку</a>
+                            </div>
+                        </div>
+                        <div class="steps-main-slider__item swiper-slide">
+                            <div class="steps-main-slider__img">
+                                <img src="images/steps-1.jpg" alt="step">
+                            </div>
+                            <div class="steps-main-slider__content">
+                                <div class="steps-main-slider__step">этап 4</div>
+                                <div class="steps-main-slider__title">Оставьте заявку и Lorem ipsum dolor sit </div>
+                                <div class="steps-main-slider__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa </p>
+                                </div>
+                                <a class="steps-main-slider__btn btn" href="#">убедили! оставить заявку</a>
+                            </div>
+                        </div>
+                        <div class="steps-main-slider__item swiper-slide">
+                            <div class="steps-main-slider__img">
+                                <img src="images/steps-1.jpg" alt="step">
+                            </div>
+                            <div class="steps-main-slider__content">
+                                <div class="steps-main-slider__step">этап 3</div>
+                                <div class="steps-main-slider__title">Оставьте заявку и Lorem ipsum dolor sit </div>
+                                <div class="steps-main-slider__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa </p>
+                                </div>
+                                <a class="steps-main-slider__btn btn" href="#">убедили! оставить заявку</a>
+                            </div>
+                        </div>
+                        <div class="steps-main-slider__item swiper-slide">
+                            <div class="steps-main-slider__img">
+                                <img src="images/steps-1.jpg" alt="step">
+                            </div>
+                            <div class="steps-main-slider__content">
+                                <div class="steps-main-slider__step">этап 2</div>
+                                <div class="steps-main-slider__title">Оставьте заявку и Lorem ipsum dolor sit </div>
+                                <div class="steps-main-slider__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa </p>
+                                </div>
+                                <a class="steps-main-slider__btn btn" href="#">убедили! оставить заявку</a>
+                            </div>
+                        </div>
+                        <div class="steps-main-slider__item swiper-slide">
+                            <div class="steps-main-slider__img">
+                                <img src="images/steps-1.jpg" alt="step">
+                            </div>
+                            <div class="steps-main-slider__content">
+                                <div class="steps-main-slider__step">этап 1</div>
+                                <div class="steps-main-slider__title">Оставьте заявку и Lorem ipsum dolor sit </div>
+                                <div class="steps-main-slider__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa </p>
+                                </div>
+                                <a class="steps-main-slider__btn btn" href="#">убедили! оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculate">
+        <div class="container">
+            <h1 class="calculate__title title"><span>Рассчитайте</span> <span> ваш заработок</span> <span>прямо сейчас</span></h1>
+            <div class="calculate__inner">
+
             </div>
         </div>
     </section>
