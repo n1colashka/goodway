@@ -127,6 +127,25 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    function initCarMove() {
+        const car = document.querySelector("#car");
+        const carWrapper = document.querySelector(".benefits__car");
+        let moveRange = 0;
+        
+        var startX = -100,
+            blurValue = 5,
+            w = document.documentElement.offsetWidth,
+            h = document.documentElement.offsetHeight;
+        carWrapper.addEventListener('mousemove', function(evt){
+            var posX = Math.round(evt.clientX / w * startX);
+            car.style.transform = `translateX(${posX}px)`;
+            car.style.filter = `blur(${blurValue}px)`;
+            moveRange = evt.movementX;
+        })
+    
+    
+    }
+
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 1250) {
         initMenu();
@@ -137,6 +156,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     initCarsSlider();
-    // AOS.init();
-
+    initCarMove();
 });

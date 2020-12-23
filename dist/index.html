@@ -773,19 +773,19 @@
 
     <section class="benefits">
         <div class="benefits__bg">
-            <img class="benefits__bg-item benefits__bg-item--left" src="images/benefits-bg-left.png">
-            <img class="benefits__bg-item benefits__bg-item--right" src="images/benefits-bg-right.png">
+            <img class="benefits__bg-item benefits__bg-item--left" src="images/benefits-bg-left.png" data-aos="fade-right">
+            <img class="benefits__bg-item benefits__bg-item--right" src="images/benefits-bg-right.png"  data-aos="fade-left">
         </div>
         <div class="container">
             <h1 class="benefits__title title"><span>Преимущества работы</span> <span>с goodway</span></h1>
             <div class="benefits__inner">
                 <div class="benefits__car">
-                    <img src="images/benefits-car-big.png" alt="car">
+                    <img src="images/benefits-car-big.png" alt="car" id="car">
                 </div>
                 <div class="benefits__slider">
                     <div class="benefits__list">
                         <div class="benefits__slider-item">
-                            <div class="benefits__item benefits__item--1">
+                            <div class="benefits__item benefits__item--1" data-aos="fade-right">
                                 <div class="benefits__item-inner">
                                     <div class="benefits__item-title">
                                         Только новые машины
@@ -795,7 +795,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="benefits__item benefits__item--left benefits__item--3">
+                            <div class="benefits__item benefits__item--left benefits__item--3"  data-aos="fade-left">
                                 <div class="benefits__item-inner">
                                     <div class="benefits__item-title">
                                         Широкий ассортимент авто
@@ -807,7 +807,7 @@
                             </div>
                         </div>
                         <div class="benefits__slider-item">
-                            <div class="benefits__item benefits__item--2">
+                            <div class="benefits__item benefits__item--2"  data-aos="fade-right">
                                 <div class="benefits__item-inner">
                                     <div class="benefits__item-title">
                                         Страховка, ТО и автосервис за счет компании
@@ -817,7 +817,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="benefits__item benefits__item--4">
+                            <div class="benefits__item benefits__item--4"  data-aos="fade-right">
                                 <div class="benefits__item-inner">
                                     <div class="benefits__item-title">
                                         Безопасный вывод
@@ -829,7 +829,7 @@
                             </div>
                         </div>
                         <div class="benefits__slider-item">
-                            <div class="benefits__item benefits__item--left benefits__item--5">
+                            <div class="benefits__item benefits__item--left benefits__item--5" data-aos="fade-left">
                                 <div class="benefits__item-inner">
                                     <div class="benefits__item-title">
                                         Моментальные выплаты
@@ -839,7 +839,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="benefits__item benefits__item--left benefits__item--6">
+                            <div class="benefits__item benefits__item--left benefits__item--6" data-aos="fade-left">
                                 <div class="benefits__item-inner">
                                     <div class="benefits__item-title">
                                         Авто на домашнем хранении
@@ -865,6 +865,30 @@
     
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 500, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        });
+    </script>
     <script>
         document.addEventListener( 'wpcf7mailsent', function( event ) {
             if(event.detail.contactFormId=="41"){

@@ -114,6 +114,22 @@ document.addEventListener('DOMContentLoaded', function () {
         prevEl: '.benefits-button-prev'
       }
     });
+  }
+
+  function initCarMove() {
+    var car = document.querySelector("#car");
+    var carWrapper = document.querySelector(".benefits__car");
+    var moveRange = 0;
+    var startX = -100,
+        blurValue = 5,
+        w = document.documentElement.offsetWidth,
+        h = document.documentElement.offsetHeight;
+    carWrapper.addEventListener('mousemove', function (evt) {
+      var posX = Math.round(evt.clientX / w * startX);
+      car.style.transform = "translateX(".concat(posX, "px)");
+      car.style.filter = "blur(".concat(blurValue, "px)");
+      moveRange = evt.movementX;
+    });
   } // Функции работающие только на мобильных устройствах
 
 
@@ -125,5 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initBenefitsSlider();
   }
 
-  initCarsSlider(); // AOS.init();
+  initCarsSlider();
+  initCarMove();
 });
