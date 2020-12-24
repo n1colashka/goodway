@@ -1002,11 +1002,58 @@
         </div>
     </section>
 
-    <section class="calculate">
+    <section class="calculator">
         <div class="container">
-            <h1 class="calculate__title title"><span>Рассчитайте</span> <span> ваш заработок</span> <span>прямо сейчас</span></h1>
-            <div class="calculate__inner">
-
+            <h1 class="calculator__title title"><span>Рассчитайте</span> <span> ваш заработок</span> <span>прямо сейчас</span></h1>
+            <div class="calculator__inner">
+                <form class="calculator__form">
+                    <div class="calculator__head">
+                        <div class="calculator__content-title">Количество рабочих дней</div>
+                        <div class="calculator__profit">Ваш заработок: <span id="profit">4345</span><b>₽</b></div>
+                    </div>
+                    <div class="calculator__range">
+                        <input
+                        type="range"
+                        min="0"
+                        max="31"
+                        step="1"
+                        data-buffer="12" />
+                        <div class="calculator__range-min">1</div>
+                        <div class="calculator__range-curr">12</div>
+                        <div class="calculator__range-max">31</div>
+                    </div>
+                    <div class="calculator__content-title">Оставить заявку</div>
+                    <div class="calculator__foot">
+                        <div class="calculator__foot-item">
+                            <input type="text" placeholder="Телефон">
+                        </div>
+                        <div class="calculator__foot-item">
+                            <button>Взять авто в аренду</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="calculator__benefits">
+                    <div class="calculator__benefits-item">
+                        <img src="images/calculation-icon-1.png" alt="статус gold" class="calculator__benefits-img">
+                        <img src="images/calculation-icon-1-mob.png" alt="Гарантированная выручка" class="calculator__benefits-img-mob">
+                        <span>Статус "Gold" - привилегии по заказам, высокий гарантированный доход</span>
+                    </div>
+                    <div class="calculator__benefits-item">
+                        <img src="images/calculation-icon-2.png" alt="Повышенная стоимость" class="calculator__benefits-img">
+                        <img src="images/calculation-icon-2-mob.png" alt="Гарантированная выручка" class="calculator__benefits-img-mob">
+                        <span>Повышенная стоимость минимального заказа</span>
+                    </div>
+                    <div class="calculator__benefits-item">
+                        <img src="images/calculation-icon-3.png" alt="Нет жесткого графика" class="calculator__benefits-img">
+                        <img src="images/calculation-icon-3-mob.png" alt="Гарантированная выручка" class="calculator__benefits-img-mob">
+                        <span>Нет жесткого графика, водитель сам выбирает как работать</span>
+                    </div>
+                    <div class="calculator__benefits-item">
+                        <img src="images/calculation-icon-4.png" alt="Гарантированная выручка" class="calculator__benefits-img">
+                        <img src="images/calculation-icon-4-mob.png" alt="Гарантированная выручка" class="calculator__benefits-img-mob">
+                        <span>Гарантированная выручка - 3 500 рублей в день</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -10,6 +10,7 @@ const cleanCSS = require('gulp-clean-css');
             'node_modules/normalize.css/normalize.css',
             'node_modules/swiper/swiper-bundle.min.css',
             'node_modules/aos/dist/aos.css',
+            'node_modules/rangeslider-pure/dist/range-slider.min.css',
         ])
             .pipe(concat('libs.css'))
             .pipe(cleanCSS({

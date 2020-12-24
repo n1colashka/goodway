@@ -38,6 +38,7 @@
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "plyr": "^3.6.2",
+    "rangeslider-pure": "^0.4.11",
     "smoothscroll-for-websites": "^1.4.10",
     "swiper": "^6.3.3",
     "vinyl-buffer": "^1.0.1",

@@ -5,6 +5,7 @@ const vendorsScripts = [
     // Insert libs src here:
     'node_modules/aos/dist/aos.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/rangeslider-pure/dist/range-slider.min.js',
     // 'node_modules/fslightbox/index.js',
 ];
 

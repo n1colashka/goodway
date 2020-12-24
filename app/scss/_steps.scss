@@ -166,6 +166,9 @@
 
     .swiper-pagination {
         bottom: 0;
+        display: flex;
+		    justify-content: center;
+		    flex-direction: row-reverse;
 
         .swiper-pagination-bullet {
             width: 10px;
