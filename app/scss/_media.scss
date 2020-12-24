@@ -40,6 +40,12 @@
 }
 
 @media (max-width: 1570px) {
+    .about__info {
+        margin-right: 140px;
+    }
+    .about__inner {
+        min-height: 1000px;
+    }
     .calculator {
         &__benefits {
             margin-left: -15px;
@@ -348,7 +354,40 @@
 }
 
 @media (max-width: 1280px) {
+    .about {
+        &__num {
+            font-weight: 800;
+            font-size: 72px;
+        }
+        &__caption {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__info {
+            margin-right: 0;
+        }
+        &__box {
+            max-width: 510px;
+            padding: 30px;
+            padding-top: 37px;
+            background: radial-gradient(circle at 50% 0, transparent calc(45px - 1px), #fff 45px);
+        }
+    
+        &__icon {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+    }
+}
 
+@media (max-width: 1150px) {
+    .about {
+        background: url('../images/about-bg-tablet.png') center / cover no-repeat;
+    }
 }
 
 @media (max-width: 1250px) {
@@ -494,6 +533,47 @@
 }
 
 @media (max-width: 845px) {
+    .about {
+    
+        &__num {
+            font-size: 48px;
+        }
+        &__caption {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &__info {
+            position: absolute;
+            margin-right: 0;
+            right: 60px;
+        }
+        &__box {
+            // background: radial-gradient(circle at 100% 144px, transparent calc(24px - 1px), #fff 24px);
+            margin-left: 13px;
+            background: #fff;
+            padding: 20px;
+            padding-right: 33px;
+            opacity: 0;
+        }
+        &__box-title {
+            font-size: 15.552px;
+            line-height: 19px;
+        }
+        &__box-text {
+            font-size: 12.096px;
+            line-height: 160%;
+        }
+        &__icon {
+            width: 43px;
+            height: 43px;
+            right: -26px;
+            left: auto;
+            top: auto;
+            bottom: 60px;
+            transform: none;
+            z-index: 50;
+        }
+    }
     .benefits {
         padding-top: 100px;
         .swiper-pagination,
@@ -782,7 +862,7 @@
             }
 
             &:last-child, 
-            &:first-child, {
+            &:first-child {
                 margin-left: 0;
                 max-width: 100%;
             }
@@ -848,6 +928,14 @@
     }
 }
 @media (max-width: 600px) {
+    .about {
+        background: url('../images/tree-mobil.png') left no-repeat, 
+        url('../images/about-bg-tablet.png') center / cover no-repeat;
+
+        &__inner {
+            min-height: 645px;
+        }
+    }
     
     .partners {
         padding: 40px 0;

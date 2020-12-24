@@ -298,6 +298,87 @@ document.addEventListener('DOMContentLoaded', function () {
         initRange();
     }
 
+    function initModalAbout() {
+        const modal = document.querySelector('.about__box');
+        const modalBtn = document.querySelector('.about__icon');
+        const overlay = document.querySelector('.overlay');
+        const html = document.querySelector('html');
+
+        modalBtn.addEventListener('click', () => {
+            modal.classList.toggle('open');
+            overlay.classList.toggle('active');
+            html.classList.toggle('overflow-hidden');
+        })
+
+        overlay.addEventListener('click', () => {
+            modal.classList.remove('open');
+            overlay.classList.remove('active');
+            html.classList.remove('overflow-hidden');
+        })
+    }
+
+    function aboutNumbersRun() {
+        const time = 4000;
+        let step = 100;
+        const numbers = document.querySelectorAll('.about__num');
+
+
+        function outNum(num, elem, step) {
+            let n = 0;
+            let t = Math.round(time / (num / step));
+            let interval = setInterval(() => {
+                n += step;
+
+                if (n == num) clearInterval(interval);
+
+                elem.textContent = n;
+            }, t)
+        }
+
+        numbers.forEach(number => {
+            if (number.dataset.num <= 50) step = 1;
+            else step = 100;
+            outNum(number.dataset.num, number, step);
+        })
+    }
+
+
+    function initStartNumbersRun() {
+        var Visible = function () {
+            target = document.querySelector('.about__title');
+          // Все позиции элемента
+          var targetPosition = {
+              top: window.pageYOffset + target.getBoundingClientRect().top,
+              left: window.pageXOffset + target.getBoundingClientRect().left,
+              right: window.pageXOffset + target.getBoundingClientRect().right,
+              bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+              top: window.pageYOffset,
+              left: window.pageXOffset,
+              right: window.pageXOffset + document.documentElement.clientWidth,
+              bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+        
+          if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            // Если элемент полностью видно, то запускаем следующий код
+            window.removeEventListener('scroll', Visible);
+            aboutNumbersRun();
+          } 
+        };
+        
+        // Запускаем функцию при прокрутке страницы
+        window.addEventListener('scroll', Visible);
+        
+        // А также запустим функцию сразу. А то вдруг, элемент изначально видно
+        Visible();
+        
+    }
+    
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 1250) {
         initMenu();
@@ -306,16 +387,26 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 845) {
         removeBenefitsItemsAnimations();
         initBenefitsSlider();
+        initModalAbout();
     }
     
 
     if (window.innerWidth <= 768) {
         changeStepsLineSize();
     }
-    
+
     initCalculator();
     initCarMove();
     initAos();
     initStepsSliders();
     initCarsSlider();
+    initStartNumbersRun();
+
+    
+
+
+    // document.addEventListener('aos:in:aboutTitle', () => {
+    //     aboutNumbersRun();
+    // });
+    
 });
