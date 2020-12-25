@@ -781,7 +781,7 @@
             <h1 class="benefits__title title"><span>Преимущества работы</span> <span>с goodway</span></h1>
             <div class="benefits__inner">
                 <div class="benefits__car">
-                    <img src="images/benefits-car-big.png" alt="car" id="car">
+                    <img src="images/car-solo.png" alt="car" id="car">
                 </div>
                 <div class="benefits__slider">
                     <div class="benefits__list">
@@ -1324,12 +1324,97 @@
         </div>
     </section>
 
+    <section class="contacts">
+        <div class="container">
+            <h1 class="contacts__title title"><span>Контакты</span></h1>
+        </div>
+        <div class="contacts__map">
+            <div class="contacts__box">
+                <div class="contacts__list">
+                    <div class="contacts__item">
+                        <img src="images/contacts-icon-1.svg" alt="contacts">
+                        <address class="contacts__item-text">г. Москва, Мытищинский пр-д, д.4</address>
+                    </div>
+                    <div class="contacts__item">
+                        <img src="images/contacts-icon-2.svg" alt="contacts">
+                        <a class="contacts__item-text" href="tel:+74994330775">+7 (499) 433-07-75</a>
+                    </div>
+                    <div class="contacts__item">
+                        <img src="images/contacts-icon-3.svg" alt="contacts">
+                        <span class="contacts__item-text">Пн-Вс с 10:00 до 19:00</span>
+                    </div>
+                </div>
+                <div class="contacts__slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="contacts__slider-item swiper-slide">
+                            <picture>
+                                <img src="images/contacts-1.jpg" alt="">
+                                <source srcset="images/contacts-1.webp" type="image/webp">
+                            </picture>
+                        </div>
+                        <div class="contacts__slider-item swiper-slide">
+                            <picture>
+                                <img src="images/contacts-1.jpg" alt="">
+                                <source srcset="images/contacts-1.webp" type="image/webp">
+                            </picture>
+                        </div>
+                        <div class="contacts__slider-item swiper-slide">
+                            <picture>
+                                <img src="images/contacts-1.jpg" alt="">
+                                <source srcset="images/contacts-1.webp" type="image/webp">
+                            </picture>
+                        </div>
+                        <div class="contacts__slider-item swiper-slide">
+                            <picture>
+                                <img src="images/contacts-1.jpg" alt="">
+                                <source srcset="images/contacts-1.webp" type="image/webp">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div id="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A77939b8fd964b5f8564f02ec86221a5b897e1b9eaf822cee96253c62fa70d929&amp;width=100%25&amp;height=555&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo-block">
+                    <a class="footer__logo" href="index.html">
+                        <img src="images/logo-footer.svg" alt="goodway">
+                    </a>
+                    <div class="footer__text">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean 
+                    </div>
+                </div>
+                <div class="footer__form">
+                    <form action="#">
+                        <div class="footer__form-title">Ответим на все ваши вопросы</div>
+                        <div class="footer__inputs">
+                            <div class="footer__input">
+                                <input type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="footer__input">
+                                <input type="number" placeholder="Ваш номер телефона">
+                            </div>
+                            <button class="footer__btn btn">задать вопрос</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <div class="overlay"></div>
     
     
+
     <script>
         document.addEventListener( 'wpcf7mailsent', function( event ) {
             if(event.detail.contactFormId=="41"){

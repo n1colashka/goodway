@@ -460,12 +460,36 @@
 }
 
 @media (max-width: 1150px) {
+    .footer {
+        &__inputs {
+            flex-wrap: wrap;
+        }
+        &__logo {
+            margin-bottom: 25px;
+        }
+        &__input {
+            margin: 0;
+            max-width: calc(50% - 7px);
+
+            &:nth-child(2) {
+                margin-left: 14px;
+            }
+        }
+    
+        &__btn {
+            margin-top: 15px;
+            max-width: 100%;
+        }
+    }
     .about {
         background: url('../images/about-bg-tablet.png') center / cover no-repeat;
     }
 }
 
 @media (max-width: 1250px) {
+    .contacts__box {
+        left: 75px;
+    }
     .reviews {
         &__inner {
             margin: 0 -50px;
@@ -1195,6 +1219,56 @@
 
 
 @media (max-width: 700px) {
+    .footer {
+        padding: 60px 0;
+        &__logo-block {
+            margin-bottom: 40px;
+            max-width: 100%;
+        }
+        &__form {
+            max-width: 100%;
+            margin-left: 0;
+        }
+        &__inputs {
+            flex-direction: column;
+        }
+        &__input {
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 100%;
+            &:nth-child(2) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        &__btn {
+            margin-top: 5px;
+            padding-top: 11px;
+            padding-bottom: 17px;
+            font-size: 14px;
+            line-height: 120%;
+            background: linear-gradient(360deg, #FCCB05 0%, #FFE57D 100%);
+            box-shadow: inset 0px -5px 4px #E3BA15, inset 0px -10px 4px #FFD632;
+        }
+        &__inner {
+            flex-direction: column;
+        }
+        &__text {
+            max-width: 100%;
+        }
+    }
+    .ymaps-2-1-78-map {
+        height: 630px !important;
+    }
+    .contacts {
+        &__map {
+            padding-bottom: 100px;
+        }
+        &__box {
+            top: 65px;
+            left: 5px;
+        }
+    }
     .hero {
         &__title {
             font-size: 24px;
@@ -1312,6 +1386,25 @@
 }
 
 @media (max-width: 430px) {
+    .contacts {
+        &__box {
+            background-image: url('../images/contacts-back-mob.svg');
+            width: 310px;
+            height: 335px;
+            left: 0;
+            right: 0;
+            margin: 0 auto; 
+        }
+        
+        &__slider {
+            height: 255px;
+            padding-bottom: 48px;
+        }
+
+        &__slider-item {
+            height: 140px;
+        }
+    }
     .benefits {
         &__item {
             background-size: cover;

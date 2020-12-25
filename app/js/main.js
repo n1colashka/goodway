@@ -426,6 +426,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
+
+    function initContactsSlider() {
+        var contactsSlider = new Swiper('.contacts__slider', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    }
     
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 1250) {
@@ -442,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 768) {
         changeStepsLineSize();
     }
-
+    initContactsSlider();
     initCalculator();
     initCarMove();
     initAos();
