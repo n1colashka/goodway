@@ -403,10 +403,4 @@ document.addEventListener('DOMContentLoaded', function () {
     initStartNumbersRun();
 
     
-
-
-    // document.addEventListener('aos:in:aboutTitle', () => {
-    //     aboutNumbersRun();
-    // });
-    
 });

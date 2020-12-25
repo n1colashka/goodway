@@ -387,7 +387,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initAos();
   initStepsSliders();
   initCarsSlider();
-  initStartNumbersRun(); // document.addEventListener('aos:in:aboutTitle', () => {
-  //     aboutNumbersRun();
-  // });
+  initStartNumbersRun();
 });
