@@ -41,7 +41,7 @@
     "plyr": "^3.6.2",
     "rangeslider-pure": "^0.4.11",
     "smoothscroll-for-websites": "^1.4.10",
-    "swiper": "^6.3.3",
+    "swiper": "^6.4.5",
     "vinyl-buffer": "^1.0.1",
     "yargs": "^15.4.1"
   },
