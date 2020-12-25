@@ -1,0 +1,189 @@
+.questions {
+    padding: 70px 0;
+    background-color: #F5F5F5;
+    position: relative;
+    background: url('../images/question-bg.png') right 40% bottom no-repeat;
+
+    &__bg-item {
+        position: absolute;
+        right: -171px;
+        top: -272px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__block {
+        position: relative;
+    }
+
+    &__img {
+        display: inline-block;
+        position: relative;
+        margin-bottom: -90px;
+    }
+
+    &__manager {
+        position: absolute;
+        right: -227px;
+        top: 93px;
+
+        &::before {
+            position: absolute;
+            background: url('../images/question-line.svg') center no-repeat;
+            content: "";
+            bottom: -100px;
+            left: -100px;
+            width: 100px;
+            height: 65px;
+        }
+    }
+
+    &__manager-name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    &__manager-position {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    &__box {
+        position: relative;
+        max-width: 470px;
+        padding: 44px 48px;
+        background-color: #ffffff;
+        box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        text-align: center;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: calc(100% - 15px);
+            height: calc(100% - 15px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px dashed #E5E5E5;
+            border-radius: 15px;
+        }
+    }
+
+    &__box-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    &__box-subtitle {
+        font-size: 14px;
+        line-height: 180%;
+        margin-bottom: 20px;
+        color: #BFBFBF;
+    }
+
+    &__box-btn {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__right {
+        margin-left: 160px;
+        max-width: 800px;
+        width: 100%;
+    }
+
+}
+
+
+.accordion {
+    position: relative;
+    z-index: 3;
+
+    &__item {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        margin-bottom: 20px;
+        transition: .3s ease;
+        cursor: pointer;
+
+        &.open {
+            padding: 35px 40px;
+            padding-right: 60px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07);
+            background-color: #ffffff;
+            border-radius: 10px;
+
+            .accordion__item-title {
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+                border-radius: 0;
+                padding: 0;
+            }
+            
+            .accordion__content {
+                height: 100%;
+                opacity: 1;
+                font-size: 18px;
+                margin-top: 35px;
+                background-color: #ffffff;
+            }
+        }
+        
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__item-title {
+            position: relative;
+            display: block;
+            padding: 35px 40px;
+            padding-right: 60px;
+            transition: .3s ease;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 3px;
+                right: 40px;
+                top: 50%;
+                background-color: $main;
+                transform-origin: right;
+                transform: translateY(-50%) rotate(45deg);
+                transition: .3s ease;
+            }
+
+            &::after {
+                transform: translateY(-50%) rotate(-45deg);
+                top: 50%;
+            }
+        
+    }
+
+    &__content {
+        line-height: 150%;
+        height: 0;
+        font-size: 0;
+        opacity: 0;
+        transition: .3s ease;
+        
+    }
+}

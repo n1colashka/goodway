@@ -37,9 +37,52 @@
     .cars-slider__arrow--next {
         margin-left: 10px;
     }
+
+    .questions {
+        &__manager {
+            right: -138px;
+            top: 155px;
+
+            &::before {
+                bottom: -75px;
+                left: -50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .reviews {
+        &__slider {
+            margin: 0 150px;
+        }
+        .reviews-button-next {
+            right: 60px;
+        }
+        .reviews-button-prev {
+            left: 60px;
+        }
+    }
 }
 
 @media (max-width: 1570px) {
+    .questions {
+        &__inner {
+            align-items: stretch;
+        }
+        &__right {
+            margin-top: 250px;
+            margin-left: 85px;
+        }
+        &__item-title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+        }
+        &__manager-name {
+            font-size: 16px;
+        }
+    }
     .about__info {
         margin-right: 140px;
     }
@@ -246,6 +289,38 @@
 }
 
 @media (max-width: 1350px) {
+    .questions {
+        padding: 70px 0;
+        &__bg-item {
+            right: -171px;
+            top: -122px;
+        }
+        &__right {
+            max-width: 450px;
+        }
+    }
+
+    .accordion {
+        &__item-title {
+            padding: 30px 25px;
+            padding-right: 50px;
+        }
+        &__item.open {
+            padding: 30px 25px;
+            padding-right: 50px;
+        }
+    }
+    .reviews {
+        &__slider {
+            margin: 0 100px;
+        }
+        .reviews-button-next {
+            right: 0;
+        }
+        .reviews-button-prev {
+            left: 0;
+        }
+    }
     .calculator {
         padding-top: 150px;
         padding-bottom: 55px;
@@ -391,6 +466,48 @@
 }
 
 @media (max-width: 1250px) {
+    .reviews {
+        &__inner {
+            margin: 0 -50px;
+        }
+        &__slider {
+            margin: 0 15px;
+        }
+        .reviews-button-next {
+            display: none;
+        }
+        .reviews-button-prev {
+            display: none;
+        }
+        &__name {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &__profit {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    
+    }
+    .conditions {
+        min-height: 1000px;
+        &__title {
+            margin-bottom: 72px;
+        }
+        &__item {
+            background-size: 35px;
+            font-size: 14px;
+            line-height: 120%;
+            margin-bottom: 10px;
+        }
+        &__box {
+            margin-top: 0;
+            padding: 40px;
+            width: 575px;
+            height: 480px;
+        }
+    }
     .connect {
         &__img {
             img {
@@ -541,6 +658,11 @@
 }
 
 @media (max-width: 1000px) {
+    .questions {
+        &__right {
+            margin-left: 30px;
+        }
+    }
     .hero {
         &__foot {
             margin-left: 240px;
@@ -586,6 +708,53 @@
         margin-bottom: 35px;
     }
     
+}
+
+@media (max-width: 880px) {
+    .accordion {
+        margin-bottom: 5px;
+        &__item {
+            font-size: 14px;
+            line-height: 120%;
+            margin-bottom: 15px;
+
+            &.open {
+                padding: 25px;
+                padding-right: 50px;
+            }
+        }
+        &__btn {
+            display: block;
+        }
+        &__item-title {
+            padding: 25px;
+            padding-right: 50px;
+        }
+    }
+    .questions {
+        background: url('../images/question-bg.png') left -253px bottom -290px no-repeat;
+        padding: 50px 0;
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__left {
+            display: none;
+        }
+        &__right {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+    }
+    .accordion__item-title {
+        min-height: 65px;
+    }
+    .accordion__btn {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 }
 
 @media (max-width: 845px) {
@@ -739,6 +908,12 @@
 }
 
 @media (max-width: 991px) {
+    .reviews {
+        &__item {
+            width: 230px;
+        }
+    }
+    
     .hero {
         &__foot {
             flex-direction: column;
@@ -756,6 +931,24 @@
 }
 
 @media (max-width: 768px) {
+    .conditions {
+        min-height: 700px;
+        &__title {
+            margin-bottom: 40px;
+        }
+        &__item {
+            background-size: 21px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 30px;
+        }
+        &__box {
+            background-image: url('../images/conditions-back-mobile.svg');
+            padding: 30px;
+            width: 300px;
+            height: 330px;
+        }
+    }
     .connect {
         &__title {
             margin-bottom: 40px;
@@ -1068,6 +1261,9 @@
 }
 
 @media (max-width: 480px) {
+    .questions {
+        background: url("../images/question-bg.png") left -505px bottom -290px no-repeat;
+    }
     .benefits__title {
         font-size: 23px;
     }

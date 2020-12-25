@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function initStartNumbersRun() {
         var Visible = function () {
-            target = document.querySelector('.about__title');
+            target = document.querySelector('.about__box');
           // Все позиции элемента
           var targetPosition = {
               top: window.pageYOffset + target.getBoundingClientRect().top,
@@ -378,6 +378,54 @@ document.addEventListener('DOMContentLoaded', function () {
         Visible();
         
     }
+
+    function initReviewsSlider() {
+        var reviewsSlider = new Swiper('.reviews__slider', {
+            slidesPerView: 4,
+            spaceBetween: 70,
+            breakpoints: {
+                320: {
+                    slidesPerView: 'auto',
+                    // slidesPerView: 2,
+                    // centerMode: true,
+                    spaceBetween: 20,
+                },
+                768: {
+                    // slidesPerView: 'auto',
+                    // centerMode: true,
+                    // spaceBetween: 50,
+                },
+                1250: {
+                    slidesPerView: 4,
+                    // centerMode: false,
+                },
+                1600: {
+                    // spaceBetween: 60,
+                    // slidesPerView: 4,
+                },
+                1601: {
+                    // spaceBetween: 70,
+                },
+                
+            },
+            navigation: {
+                nextEl: '.reviews-button-next',
+                prevEl: '.reviews-button-prev',
+            },
+        });
+    }
+
+    function initAccordion() {
+        const accordion = document.querySelector('.accordion');
+
+        accordion.addEventListener('click', e => {
+
+            if (e.target.classList.contains('accordion__item-title')){
+                console.log(e.target);
+                e.target.closest('.accordion__item').classList.toggle('open');
+            }
+        })
+    }
     
     // Функции работающие только на мобильных устройствах
     if (window.innerWidth <= 1250) {
@@ -401,6 +449,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initStepsSliders();
     initCarsSlider();
     initStartNumbersRun();
-
-    
+    initReviewsSlider();
+    initAccordion();
 });
