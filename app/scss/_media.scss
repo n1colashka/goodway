@@ -923,13 +923,41 @@
             padding-top: 0;
             min-height: auto;
         }
+        
         &__item {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             position: static;
             box-sizing: border-box;
-            margin-bottom: -20px;
+            padding: 0;
+            max-width: 510px;
+            width: 100%;
+            max-width: 510px;
+            width: 100%;
+            height: 250px;
+            padding: 50px;
+            padding-right: 85px;
+            background-size: cover;
+
+            &--1 {
+                background-image: url('../images/benefits-item-1-mob.svg');
+            }
+            &--2 {
+                background-image: url('../images/benefits-item-2-mob.svg');
+            }
+            &--3 {
+                background-image: url('../images/benefits-item-3-mob.svg');
+            }
+            &--4 {
+                background-image: url('../images/benefits-item-4-mob.svg');
+            }
+            &--5 {
+                background-image: url('../images/benefits-item-5-mob.svg');
+            }
+            &--6 {
+                background-image: url('../images/benefits-item-6-mob.svg');
+            }
         }
         
         &__slider-item {
@@ -938,7 +966,11 @@
             align-items: center;
         }
         &__item--left {
-            align-items: flex-end;
+            justify-content: flex-start;
+            .benefits__item-inner {
+                padding-right: 0;
+                padding-left: 15px;
+            }
         }
     }
 }
@@ -1342,6 +1374,26 @@
 }
 
 @media (max-width: 480px) {
+    .benefits {
+        &__slider {
+            height: auto;
+            padding-bottom: 60px;
+        }
+        &__item-inner {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &__item {
+            background-size: cover;
+            padding-top: 25px;
+            padding: 30px;
+            padding-left: 20px;
+            padding-right: 100px;
+            min-height: 150px;
+            height: auto;
+            width: 310px;
+        }
+    }
     .questions {
         background: url("../images/question-bg.png") left -505px bottom -290px no-repeat;
     }
@@ -1414,25 +1466,17 @@
     }
     .benefits {
         &__item {
-            background-size: cover;
-            width: calc(470px - 36%);
-            height: calc(270px - 14%);
-            margin-bottom: 30px;
             padding: 30px;
+            padding-right: 100px;
+            height: 180px;
+            padding-top: 25px;
         }
         &__slider {
             height: auto;
             padding-bottom: 40px;
         }
-        &__item--left {
-            .benefits__item-inner {
-                top: 0;
-            }
-        }
         &__item-inner {
             max-width: 200px;
-            position: relative;
-            top: 20px;
         }
     }
 }
