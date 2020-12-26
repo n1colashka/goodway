@@ -782,6 +782,14 @@
         }
         
     }
+    .accordion__item.open .accordion__content{
+        margin-top: 20px;
+        font-size: 13px;
+    }
+    .accordion__item.open .accordion__item-title{
+        min-height: auto;
+    }
+    
     .accordion__item-title {
         min-height: 65px;
     }
