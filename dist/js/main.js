@@ -196,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     freeMode: true,
                 },
                 601: {
+                    
                     touchRatio: 0,
                     slidesPerView: 5,
                 },

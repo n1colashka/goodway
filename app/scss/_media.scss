@@ -817,9 +817,8 @@
             right: 60px;
         }
         &__box {
-            // background: radial-gradient(circle at 100% 144px, transparent calc(24px - 1px), #fff 24px);
+            background: radial-gradient(circle at 100% calc(100% - 90px), transparent calc(24px - 1px), #fff 24px);
             margin-left: 13px;
-            background: #fff;
             padding: 20px;
             padding-right: 33px;
             opacity: 0;
@@ -838,7 +837,7 @@
             right: -26px;
             left: auto;
             top: auto;
-            bottom: 60px;
+            bottom: 68px;
             transform: none;
             z-index: 50;
         }
@@ -1379,6 +1378,7 @@
             line-height: 16px;
         }
     }
+    
 }
 
 @media (max-width: 480px) {
