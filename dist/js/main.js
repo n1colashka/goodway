@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const carsBusiness = document.querySelectorAll('.cars-slider__item--business');
         const moreCarsBtn = document.querySelector('.cars__more-btn');
         const carsCheckbox = document.querySelector('.cars__type');
+        const carsSliderEl = document.querySelector('.cars__slider');
 
         // Сколько машин должно отображаться
         const carCount = 3;
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             car.classList.add('hidden');
         });
 
-        if (carsCheckbox.classList.contains('checked')) {
+        if (carsSliderEl.classList.contains('business')) {
             
             for (let i = 0; i < carCount; i++) {
                 carsBusiness[i].classList.remove('hidden');
@@ -78,30 +79,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
             }
         })
+
+        const carsCheckbox = document.querySelector('.cars__type');
+        const moreCarsBtn = document.querySelector('.cars__more-btn');
+        const carsSliderEl = document.querySelector('.cars__slider');
+
+        carsCheckbox.addEventListener('click', () => {
+            carsCheckbox.classList.toggle('checked');
+            carsSliderEl.classList.toggle('business');
+            
+        // Таймаут, чтобы обновить слайдер точно после скрытия элементов, при клике на бизнес-такси
+        setTimeout(() => carsSlider.update(), 100);
+        });
         
         if (window.innerWidth <= 1220) {
             showMoreCars();
             carsSlider.destroy();
 
             carsCheckbox.addEventListener('click', () => {
-                carsCheckbox.classList.toggle('checked');
                 if (moreCarsBtn.classList.contains('hidden')) return;
                 else showMoreCars();
-                
-            // Таймаут, чтобы обновить слайдер точно после скрытия элементов, при клике на бизнес-такси
-            setTimeout(() => carsSlider.update(), 100);
+            
             });
         }
         
-        const carsCheckbox = document.querySelector('.cars__type');
-        const moreCarsBtn = document.querySelector('.cars__more-btn');
 
-        carsCheckbox.addEventListener('click', () => {
-            carsCheckbox.classList.toggle('checked');
-            
-        // Таймаут, чтобы обновить слайдер точно после скрытия элементов, при клике на бизнес-такси
-        setTimeout(() => carsSlider.update(), 100);
-        });
+      
     }
 
     function initBenefitsSlider() {
