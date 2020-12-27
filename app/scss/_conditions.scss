@@ -1,16 +1,13 @@
 .conditions {
     padding-top: 45px;
     min-height: 1500px;
-    background: url('../images/conditions-bg-wrapped.jpg') center / cover no-repeat;
+    background: url('../images/conditions-bg.jpg') center / cover no-repeat;
     &__title {
         margin-bottom: 240px;
     }
 
-    &__inner {
-    }
-
     &__box {
-        // margin-top: 101px;
+        position: relative;
         background: url('../images/conditions-back-noshadow.svg') center / cover no-repeat;
         filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.3));
         width: 774px;
@@ -18,7 +15,17 @@
         padding: 55px;
     }
 
-    &__list {
+    &__car {
+        position: absolute;
+        // right: -131%;
+        right: -1008px;
+        top: 89px;
+        width: 1782px;
+
+        img {
+            width: 1788px;
+            object-fit: cover;
+        }
     }
 
     &__item {
