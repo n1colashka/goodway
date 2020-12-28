@@ -52,6 +52,12 @@
 }
 
 @media (max-width: 1600px) {
+    .conditions__bg-item {
+        right: -50%;
+        img {
+            height: 665px;
+        }
+    }
     .reviews {
         &__slider {
             margin: 0 150px;
@@ -290,6 +296,10 @@
 }
 
 @media (max-width: 1350px) {
+    .conditions__bg-item {
+        right: -500px;
+        top: 151px;
+    }
     .questions {
         padding: 70px 0;
         &__bg-item {
@@ -488,6 +498,14 @@
 }
 
 @media (max-width: 1250px) {
+    .conditions__bg-item {
+        z-index: 3;
+        right: -244px;
+        top: 135px;
+        img {
+            height: 400px;
+        }
+    }
     .contacts__box {
         left: 75px;
     }
@@ -700,7 +718,9 @@
 }
 
 @media (max-width: 1024px) {
-    
+    .conditions__bg-item {
+        right: -300px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -1016,8 +1036,13 @@
 }
 
 @media (max-width: 768px) {
+    
     .conditions {
         min-height: 700px;
+
+        &__bg-item {
+            display: none;
+        }
 
         &__car {
             right: -110%;
@@ -1278,7 +1303,6 @@
         
     }
 }
-
 
 @media (max-width: 700px) {
     .footer {

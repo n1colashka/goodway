@@ -1,9 +1,20 @@
 .conditions {
+    position: relative;
     padding-top: 45px;
     min-height: 1500px;
     background: url('../images/conditions-bg.jpg') center / cover no-repeat;
     &__title {
         margin-bottom: 240px;
+    }
+
+    &__bg-item {
+        position: absolute;
+        top: -157px;
+        right: -517px;
+
+        img {
+            height: 1090px;
+        }
     }
 
     &__box {
@@ -17,7 +28,6 @@
 
     &__car {
         position: absolute;
-        // right: -131%;
         right: -1008px;
         top: 89px;
         width: 1782px;
