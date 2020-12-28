@@ -1,6 +1,11 @@
 .about {
     background: url('../images/about-bg.png') center / cover no-repeat;
     overflow: hidden;
+    padding-top: 50px;
+
+    &__title {
+        margin-top: -50px;
+    }
 
     &__inner {
         display: flex;
@@ -33,6 +38,7 @@
     &__info {
         position: relative;
         margin-right: 270px;
+        margin-bottom: 452px;
     }
 
     &__box {

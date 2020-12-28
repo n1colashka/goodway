@@ -156,6 +156,7 @@
         flex-shrink: 0;
         cursor: pointer;
         transition: .3s ease;
+        outline: none;
 
         &:hover {
             border-color: #000000;
