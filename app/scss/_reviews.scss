@@ -24,6 +24,7 @@
         transform: translateY(-50%);
         transition: .3s ease;
         z-index: 20;
+        outline: transparent;
 
         &::before,
         &::after {

@@ -297,7 +297,7 @@
 
 @media (max-width: 1350px) {
     .conditions__bg-item {
-        right: -500px;
+        right: -300px;
         top: 151px;
     }
     .questions {
@@ -537,9 +537,13 @@
         min-height: 1000px;
 
         &__car {
-            right: -713px;
-            top: 63px;
-            width: 1280px;
+            // right: -834px;
+            // top: 36px;
+            // width: 1280px;
+
+            right: -569px;
+            top: 123px;
+            width: 1011px;
     
             img {
                 width: 100%;
@@ -556,10 +560,14 @@
         }
         &__box {
             margin-top: 0;
-            padding: 40px;
             width: 575px;
             height: 480px;
+            background-image: url('../images/conditions-back-tablet.svg');
+            padding: 70px;
+            padding-top: 60px;
         }
+
+        
     }
     .connect {
         &__icon-mob {
@@ -720,6 +728,7 @@
 @media (max-width: 1024px) {
     .conditions__bg-item {
         right: -300px;
+        top: 157px;
     }
 }
 
@@ -1045,9 +1054,9 @@
         }
 
         &__car {
-            right: -110%;
-            top: 128px;
-            width: auto;
+            right: -390px;
+            top: 114px;
+            width: 637px;
         }
         &__title {
             margin-bottom: 40px;
