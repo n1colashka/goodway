@@ -1492,11 +1492,11 @@
             background-size: cover;
             padding-top: 25px;
             padding: 30px;
-            padding-left: 20px;
+            padding-left: 27px;
             padding-right: 100px;
-            min-height: 150px;
+            min-height: 200px;
             height: auto;
-            width: 310px;
+            width: 340px;
         }
     }
     .questions {
@@ -1588,6 +1588,9 @@
     }
 }
 @media (max-width: 400px) {
+    .benefits__item {
+        height: auto;
+    }
     .cars-slider {
         &__info {
             padding: 22px;
