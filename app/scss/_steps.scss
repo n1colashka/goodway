@@ -63,7 +63,7 @@
         &:hover {
             .steps-nav-slider__step {
                 color: rgb(33, 54, 243);
-                background: linear-gradient(94.73deg, #051EFC, #51A1FF);
+                background: linear-gradient(94.73deg, #051EFC 0%, #51A1FF 86.09%);;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -123,7 +123,7 @@
     
             .steps-nav-slider__step {
                 color: rgb(33, 54, 243);
-                background: linear-gradient(94.73deg, #051EFC, #51A1FF);
+                background: linear-gradient(94.73deg, #051EFC 0%, #51A1FF 86.09%);;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -167,8 +167,8 @@
     .swiper-pagination {
         bottom: 0;
         display: flex;
-		    justify-content: center;
-		    flex-direction: row-reverse;
+        justify-content: center;
+        flex-direction: row-reverse;
 
         .swiper-pagination-bullet {
             width: 10px;

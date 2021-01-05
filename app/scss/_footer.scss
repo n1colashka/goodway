@@ -65,10 +65,19 @@
         font-size: 14px;
         line-height: 120%;
         color: #FFFFFF;
-        max-width: 400px;
+        max-width: 100%;
         width: 100%;
         min-height: 45px;
         padding: 13px;
         padding-bottom: 17px;
+    }
+
+    &__copy {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 120%;
+        color: #BFBFBF;
+        margin-top: 30px;
+        text-align: right;
     }
 }

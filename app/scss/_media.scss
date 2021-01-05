@@ -117,6 +117,57 @@
         max-width: calc(33.33% - 18px);
     }
     .benefits {
+        &__item {
+            width: 380px;
+            height: 220px;
+            padding: 50px;
+            padding-left: 30px;
+            padding-top: 54px;
+            padding-right: 110px;
+            background-size: cover;
+        }
+
+        &__item-title {
+            font-size: 14px;
+        }
+
+        &__item-text {
+            font-size: 12px;
+        }
+
+        &__car img {
+            width: 900px;
+        }
+
+        &__item--left {
+            padding-right: 50px;
+            padding-left: 110px;
+        }
+
+        &__item--5 {
+            right: 250px;
+        }
+    }
+
+    
+}
+
+@media (max-width: 1400px) {
+    .partners {
+        &__content {
+            margin-right: 60px;
+        }
+    }
+    .benefits__item--2 {
+        left: 100px;
+    }
+    .benefits__item--5 {
+        right: 150px;
+    }
+}
+
+@media (max-width: 1220px) {
+    .benefits {
         padding-bottom: 100px;
         &__bg {
             display: block;
@@ -172,17 +223,6 @@
             bottom: auto;
         }
     }
-}
-
-@media (max-width: 1400px) {
-    .partners {
-        &__content {
-            margin-right: 60px;
-        }
-    }
-}
-
-@media (max-width: 1220px) {
     .partners {
         &__list {
             flex-direction: column;
@@ -472,6 +512,9 @@
 
 @media (max-width: 1150px) {
     .footer {
+        &__copy {
+            margin-top: 20px;
+        }
         &__inputs {
             flex-wrap: wrap;
         }
@@ -1315,10 +1358,15 @@
 
 @media (max-width: 700px) {
     .footer {
-        padding: 60px 0;
+        padding-bottom: 60px;
+        padding-top: 10px;
         &__logo-block {
             margin-bottom: 40px;
             max-width: 100%;
+        }
+        &__copy {
+            text-align: left;
+            margin-top: 10px;
         }
         &__form {
             max-width: 100%;
@@ -1525,8 +1573,10 @@
         &__item {
             padding: 30px;
             padding-right: 100px;
-            height: 180px;
-            padding-top: 25px;
+            height: 230px;
+            width: 100%;
+            // padding-top: 25px;
+            padding-top: 40px;
         }
         &__slider {
             height: auto;
