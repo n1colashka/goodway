@@ -680,7 +680,9 @@
         }
     }
     .first-screen {
-        background: url('../images/hero-bg.jpg') no-repeat center left 42% /cover;
+        background: 
+                    url('../images/main-bg-car.png') bottom right -700px no-repeat, 
+                    url('../images/main-bg.jpg') no-repeat center right / cover;
     }
 
     .hero {
@@ -1440,12 +1442,27 @@
     }
 }
 @media (max-width: 600px) {
+    .cars-slider__img {
+        background: url('../images/cars-1-mob.png') center / cover no-repeat;
+        height: 300px;
+    }
+    .first-screen {
+        background: 
+                    url('../images/main-bg-car.png') bottom -50px right -700px  no-repeat, 
+                    url('../images/main-bg.jpg') no-repeat center right / cover;
+    }
     .about {
-        background: url('../images/tree-mobil.png') left no-repeat, 
+        background: url('../images/tree-mobil.png') center left -35px no-repeat, 
         url('../images/about-bg-tablet.png') center / cover no-repeat;
 
         &__inner {
             min-height: 645px;
+        }
+        &__list {
+            margin-top: -50px;
+        }
+        &__item {
+            margin-bottom: 35px;
         }
     }
     
@@ -1467,8 +1484,8 @@
     }
     .cars-slider {
         &__img {
-            height: 250px;
-            background-position: center bottom -100px;
+            // height: 250px;
+            // background-position: center bottom -100px;
         }
         &__info td {
             font-size: 13px;
@@ -1479,6 +1496,9 @@
 }
 
 @media (max-width: 480px) {
+    .cars-slider__img {
+        height: 270px;
+    }
     .benefits {
         &__slider {
             height: auto;
@@ -1517,7 +1537,7 @@
     }
     .cars-slider {
         &__item {
-        background-position: center bottom -50px;
+        // background-position: center bottom -50px;
         }
         &__title {
             font-size: 17px;
@@ -1525,7 +1545,7 @@
             margin-bottom: 18px;
         }
         &__img {
-            height: 200px;
+            // height: 200px;
         }
         &__info tr {
             margin-bottom: 6px;
@@ -1588,6 +1608,7 @@
     }
 }
 @media (max-width: 400px) {
+    
     .benefits__item {
         height: auto;
     }
@@ -1596,7 +1617,14 @@
             padding: 22px;
         }
         &__img {
-            background-position: center bottom 0px;
+            height: 250px;
+        }
+    }
+}
+@media (max-width: 360px) {
+    .cars-slider {
+        &__img {
+            height: 200px;
         }
     }
 }

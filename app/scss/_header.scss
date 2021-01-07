@@ -1,6 +1,9 @@
 .first-screen {
     min-height: 100vh;
-    background: url('../images/hero-bg.jpg') no-repeat center right / cover;
+    background: 
+            url('../images/man.png') bottom right no-repeat,
+            url('../images/main-bg-car.png') bottom right no-repeat, 
+            url('../images/main-bg.jpg') no-repeat center right / cover;
 }
 
 .header {
