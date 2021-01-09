@@ -162,7 +162,18 @@
         }
     }
 
-    
+    .first-screen {
+        background: url('../images/man.png') bottom right / 109% no-repeat,
+        url('../images/main-bg-tree.png') left top / 650px no-repeat,
+        url('../images/main-bg-car.png') bottom right / 100% no-repeat,
+        url('../images/main-bg.jpg') no-repeat center right -150px / cover;
+    }
+
+    .cars-slider {
+        &__img {
+            background: url('../images/cars-1.jpg') no-repeat center / cover;
+        }
+    }
 }
 
 @media (max-width: 1500px) {
@@ -173,15 +184,6 @@
         &__item--3 {
             right: 0;
         }
-    }
-}
-
-@media (max-width: 1450px) {
-    .first-screen {
-        background: url('../images/man.png') bottom right / 109% no-repeat,
-        url('../images/main-bg-tree.png') left top / 650px no-repeat,
-        url('../images/main-bg-car.png') bottom right / 100% no-repeat,
-        url('../images/main-bg.jpg') no-repeat center right -150px / cover;
     }
 }
 
@@ -338,7 +340,7 @@
             }
         }
         &__img {
-            background-position: center bottom -50px;
+            background: url('../images/cars-1-big.jpg') no-repeat center bottom -50px / cover;
             flex: 1 1 55%;
             height: auto;
             border-radius: 15px 0 0 15px;
