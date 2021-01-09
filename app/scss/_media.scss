@@ -179,6 +179,7 @@
 @media (max-width: 1450px) {
     .first-screen {
         background: url('../images/man.png') bottom right / 109% no-repeat,
+        url('../images/main-bg-tree.png') left top / 650px no-repeat,
         url('../images/main-bg-car.png') bottom right / 100% no-repeat,
         url('../images/main-bg.jpg') no-repeat center right -150px / cover;
     }
@@ -737,6 +738,7 @@
     .first-screen {
         background: 
                     url('../images/main-bg-car.png') bottom right -700px no-repeat, 
+                    url('../images/main-bg-tree.png') left top / 650px no-repeat,
                     url('../images/main-bg.jpg') no-repeat center right / cover;
     }
 
@@ -1537,6 +1539,7 @@
     }
     .first-screen {
         background: 
+        url('../images/main-bg-tree-mob.png') left bottom no-repeat,
                     url('../images/main-bg-car.png') bottom -50px right -700px  no-repeat, 
                     url('../images/main-bg.jpg') no-repeat center right / cover;
     }
