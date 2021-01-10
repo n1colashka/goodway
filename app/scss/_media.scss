@@ -215,6 +215,15 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .benefits__item--4 {
+        left: 150px;
+    }
+    .benefits__item--5 {
+        right: 90px;
+    }
+}
+
 @media (max-width: 1220px) {
     .benefits {
         padding-bottom: 100px;
@@ -587,6 +596,7 @@
         }
     
     }
+    
 }
 
 @media (max-width: 1150px) {
