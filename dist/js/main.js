@@ -71,10 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 1024: {
                     slidesPerView: 'auto',
+                },
+                1365: {
+                    slidesPerView: 4,
                     spaceBetween: 30,
                 },
-                1571: {
-                    slidesPerView: 4,
+                1500: {
                     spaceBetween: 45,
                 },
             }
@@ -193,19 +195,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 320: {
                     touchRatio: 1,
                     freeMode: true,
+                    slidesPerView: 'auto',
                 },
                 601: {
-                    
-                    touchRatio: 0,
+                    slidesPerView: 'auto',
+                    // touchRatio: 0,
+                    // slidesPerView: 5,
+                },
+                768: {
                     slidesPerView: 5,
+                    freemode: true,
                 },
                 
             }
         });
         var galleryTop = new Swiper('.steps-main-slider', {
             navigation: {
-                nextEl: '.swiper-button-prev',
-                prevEl: '.swiper-button-next',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
             pagination: {
                 el: '.swiper-pagination',

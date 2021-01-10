@@ -6,21 +6,6 @@
 }
 
 @media (max-width: 1720px) {
-    // .benefits {
-    //     &__item--1 {
-    //         left: -30px;
-    //         top: 160px;
-    //     }
-    //     &__item--2 {
-    //         left: 270px;
-    //     }
-    //     &__item--3 {
-    //         right: 110px;
-    //     }
-    //     &__item--4 {
-    //         left: 115px;
-    //     }
-    // }
 
     .steps__bg-item--right {
         right: -120px;
@@ -71,7 +56,28 @@
     }
 }
 
+@media (min-width: 1365px) and (max-width: 1570px) {
+    .cars-slider__info {
+        padding: 15px;
+    }
+    .cars-slider__banner {
+        padding: 8px;
+    }
+    .cars-slider__price-new {
+        font-size: 21px;
+    }
+    
+    .cars-slider__item {
+        padding-bottom: 20px;
+    }
+    .cars-slider__arrow {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 @media (max-width: 1570px) {
+    
     .questions {
         &__inner {
             align-items: stretch;
@@ -187,7 +193,17 @@
     }
 }
 
+@media (max-width: 1365px) {
+    .cars-slider__item {
+        max-width: calc(33.33% - 30px);
+    }
+}
+
 @media (max-width: 1400px) {
+
+    .first-screen {
+        background: url("../images/man.png") bottom right/85% no-repeat, url("../images/main-bg-tree.png") left -10px top / 600px no-repeat, url("../images/main-bg-car.png") bottom right / 81% no-repeat, url("../images/main-bg.jpg") no-repeat center right / cover
+    }
     .partners {
         &__content {
             margin-right: 60px;
@@ -1259,9 +1275,13 @@
     .steps-nav-slider {
         &__item {
             width: 130px;
+            flex-shrink: 0;
         }
         height: auto;
-        width: 700px;
+
+        &__wrapper {
+            width: 650px;
+        }
         
         &__line {
             width: 120px;
