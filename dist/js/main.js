@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     touchRatio: 1,
                     freeMode: true,
                     slidesPerView: 'auto',
-                    initialSlide: 3,
+                    initialSlide: 4,
                 },
                 601: {
                     slidesPerView: 'auto',
@@ -205,7 +205,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 768: {
                     slidesPerView: 5,
-                    freemode: true,
 
                 },
                 

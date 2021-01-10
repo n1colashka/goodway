@@ -486,7 +486,7 @@
         }
         &__line {
             width: 140px;
-            right: -100px;
+            right: 35px;
         }
     }
     .steps-main-slider {
@@ -917,7 +917,7 @@
     }
     .steps-nav-slider__line {
         width: 116px;
-        right: -60px;
+        right: 30px;
     }
     .steps-nav-slider {
         margin-left: 0;
@@ -1285,7 +1285,8 @@
         
         &__line {
             width: 120px;
-            right: -122px;
+            // right: -122px;
+            right: 0;
         }
         &__title {
             max-width: 95px;
