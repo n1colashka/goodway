@@ -92,7 +92,7 @@
         top: 50%;
         transform: translateY(-50%);
         width: 185px;
-        z-index: -1;
+        z-index: -5;
 
         svg line {
             transition: .3s ease;
@@ -108,7 +108,6 @@
         margin-bottom: 15px;
         background-color: #fff;
         transition: .3s ease;
-
     }
 
     .swiper-slide-thumb-active {
