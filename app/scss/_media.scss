@@ -516,7 +516,7 @@
         }
 
         .swiper-pagination {
-            bottom: 12px;
+            bottom: 16px;
         }
 
         .swiper-button-prev,
@@ -527,16 +527,17 @@
             width: 50px;
             height: 50px;
             bottom: 0;
+            right: auto;
 
             &::before,
             &::after {
                 height: 11px;
                 width: 2px;
-                top: 62%;
+                top: 60%;
             }
 
             &::after {
-                top: 44%;
+                top: 45%;
             }
             
         }
