@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 768: {
                 },
                 1024: {
-                    slidesPerView: 'auto',
+                    slidesPerView: 3,
                 },
                 1365: {
                     slidesPerView: 4,
